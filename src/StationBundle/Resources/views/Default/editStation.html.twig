@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <form action="{{ path('modifierstation') }}" method="post" class="form-group">
+        <header>
+            <h1 class="titre1">  Modifie La Station <br> ID : {{ station.id }} et de Nom : {{ station.name }}  </h1>
+
+        </header>
+        <div class="container">
+            <div class="col-lg-8">
+                <label for="em">
+                    <h3>Name :</h3>
+                </label>
+                <input class="form-control" name="name"  type="text"   value="{{ station.name }}" required>
+            </div>
+            <div class="col-lg-8">
+                <label for="ph">
+                    <h3>Adresse :</h3>
+                </label>
+                <input class="form-control" name="adresse"  type="text"   value="{{ station.adresse }}" required>
+                {#<span class="text-danger"><h3><?php if (isset($num_veh_error)) echo $num_veh_error; ?></h3></span>#}
+            </div>
+            <div class="col-lg-8">
+                <label for="em">
+                    <h3>Nombre de place :</h3>
+                </label>
+                <input class="form-control" name="place"  type="Numbre" value="{{ station.nbr_place }}"   required>
+            </div>
+            <div class="col-lg-8">
+                <label for="em">
+                    <h3>Pays :</h3>
+                </label>
+                <input class="form-control" name="pays"  type="text" value="{{ station.pays }}"    required>
+            </div>
+            <label for="em">
+                <h3>Image :</h3>
+            </label>
+            <input class="form-control" name="image"  type="file"   required>
+            {# recuperer la valeur de l'image value="{{ station.image }}" #}
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <button class="btn btn-success" value="{{ station.id }}" name="enrmodif" type="submit" >Enregistrer</button>
+            </div>
+            <div class="col-md-6 text-center">
+                <button  class="btn btn-danger" type="reset" >Annuler</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

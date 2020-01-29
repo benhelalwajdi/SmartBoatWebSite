@@ -1,0 +1,18 @@
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /user
+
+station:
+    resource: "@StationBundle/Controller/"
+    type:     annotation
+    prefix:   /station
+
+baot:
+    resource: "@BaotBundle/Controller/"
+    type:     annotation
+    prefix:   /boat
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

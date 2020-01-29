@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <title> Ajouter Vehicule </title>
+
+    <div class="container col-lg-4 ">
+        <form action="{{ path('ajoutboat') }}" method="POST" class="form-group">
+            <div class="container">
+                <div class="col-lg-8">
+                    <label for="em">
+                        <h3>Name :</h3>
+                    </label>
+                    <input class="form-control" name="name"  type="text" placeholder="bateau1"  value="" required>
+                </div>
+                <div class="col-lg-12">
+                    <label for="ph">
+                        <h3>Numero :</h3>
+                    </label>
+                    <input class="form-control" name="numero"  type="Numbre" placeholder="1"  value="" required>
+                    {#<span class="text-danger"><h3><?php if (isset($num_veh_error)) echo $num_veh_error; ?></h3></span>#}
+                </div>
+                <div class="col-lg-8">
+                    <label for="em">
+                        <h3>Longeur :</h3>
+                    </label>
+                    <input class="form-control" name="longeur"  type="Numbre" placeholder="10"   required>
+                </div>
+                <div class="col-lg-8">
+                    <label for="em">
+                        <h3>Largeur :</h3>
+                    </label>
+                    <input class="form-control" name="largeur"  type="Numbre" placeholder="10"   required>
+                </div>
+                <div class="col-lg-8">
+                    <label for="em">
+                        <h3>Place :</h3>
+                    </label>
+                    <input class="form-control" name="place"  type="Numbre" placeholder="10"   required>
+                </div>
+                <div class="col-lg-8">
+                    <label for="em">
+                        <h3>Specialite :</h3>
+                    </label>
+                    <input class="form-control" name="specialite"  type="text" placeholder="10"   required>
+                </div>
+                    <label for="em">
+                        <h3>Image :</h3>
+                    </label>
+                    <input class="form-control" name="image"  type="file" placeholder="parcourir"  required>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <button class="btn btn-success" type="submit" >Enregistrer</button>
+                </div>
+                <div class="col-md-6 text-center">
+                    <button  class="btn btn-danger" type="reset" >Annuler</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <form action="{{ path('modifierboat') }}" method="post" class="form-group">
+        <header>
+            <h1 class="titre1">  Modifie Le bateau <br> ID : {{ bateau.id }} et de Nom : {{ bateau.name }} </h1>
+
+        </header>
+        <div class="container">
+            <div class="col-lg-8">
+                <label for="em">
+                    <h3>Name :</h3>
+                </label>
+                <input class="form-control" name="name"  type="text"   value="{{ bateau.name }}" required>
+            </div>
+            <div class="col-lg-8">
+                <label for="ph">
+                    <h3>Numero :</h3>
+                </label>
+                <input class="form-control" name="numero"  type="Numbre"   value="{{ bateau.numero }}" required>
+                {#<span class="text-danger"><h3><?php if (isset($num_veh_error)) echo $num_veh_error; ?></h3></span>#}
+            </div>
+            <div class="col-lg-8">
+                <label for="em">
+                    <h3>Longeur :</h3>
+                </label>
+                <input class="form-control" name="longeur"  type="Numbre" value="{{ bateau.longeur }}"   required>
+            </div>
+            <div class="col-lg-8">
+                <label for="em">
+                    <h3>Largeur :</h3>
+                </label>
+                <input class="form-control" name="largeur"  type="Numbre" value="{{ bateau.largeur }}"    required>
+            </div>
+            <div class="col-lg-8">
+                <label for="em">
+                    <h3>Place :</h3>
+                </label>
+                <input class="form-control" name="place"  type="Numbre" value="{{ bateau.place }}"   required>
+            </div>
+            <div class="col-lg-8">
+                <label for="em">
+                    <h3>Specialite :</h3>
+                </label>
+                <input class="form-control" name="specialite"  type="text" value="{{ bateau.specialite }}"   required>
+            </div>
+            <div>
+                <label for="em">
+                    <h3>Image :</h3>
+                </label>
+                <input class="form-control" name="image"  type="file"   required>
+                {# recuperer la valeur de l'image value="{{ bateau.image }} #}
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <button class="btn btn-success" value="{{ bateau.id }}" name="enrmodif" type="submit" >Enregistrer</button>
+            </div>
+            <div class="col-md-6 text-center">
+                <button  class="btn btn-danger" type="reset" >Annuler</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
