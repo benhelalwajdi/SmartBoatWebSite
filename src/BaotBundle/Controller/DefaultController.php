@@ -91,7 +91,7 @@ class DefaultController extends Controller
     /**
      * @Route("/modifboat", name="modifierboat")
      */
-
+// update method
     public function ModifierBAction(Request $request)
     {
 
